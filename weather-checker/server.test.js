@@ -21,12 +21,11 @@ test("POST /check-weather → safe true", async () => {
             "Content-Type": "application/json",
         },
         body:JSON.stringify({
-            temperature : 25,
+            temperature : 60,
             windSpeed : 15
         }),
     });
 
     const data = await res.json();
-    console.log(data)
     assert.equal(data.safe, true)
 });

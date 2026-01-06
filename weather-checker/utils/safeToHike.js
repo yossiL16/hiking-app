@@ -4,7 +4,7 @@ export function isSafeToHike(temperature, windSpeed){
             message: "The weather is not good for walking."
         }
     }
-    if(windSpeed > 50){return {safe: false, message: "Too windy to hike!"}}
+    if(windSpeed >= 60){return {safe: false, message: "Too windy to hike!"}}
     return {
         "safe": true,
 "message": "All conditions are good for hiking!"
